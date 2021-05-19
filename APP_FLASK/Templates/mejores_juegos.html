@@ -1,0 +1,38 @@
+{% extends './base.html' %}
+
+{% block tittle%} Juegos {% endblock%}
+
+{% block body %}
+<div class="row">
+    <div class="col-md-6 offset-md-3">
+        <h1>
+            <font color="WHITE">
+            <center>
+                <font size=20 face="Comic Sans MS,arial,verdana">Juegos del Momento</font><br></font>
+            </center>
+        </h1>
+        <div class="table-responsive">
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>Nombre</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for can in juegos %}
+                    <tr>
+                        <td>{{loop.index}}</td>
+                        <td>{{can}}</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>    
+</div>
+
+<body>
+<img src="https://as.com/meristation/imagenes/2020/01/03/noticias/1578060831_464711_1578061252_noticia_normal.jpg" aling="center" width="900" height="500">
+</body>
+{% endblock %}
